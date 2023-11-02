@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../store/store'
-import { setQuestions } from '../reducers/quizReducer'
+import { gameOver, nextStage, resetGame, setQuestions, startGame } from '../reducers/quizReducer'
 
 import jsonData from '../data/quiz.json'
 import { QuizQuestion, QuizScreen } from '../types'
@@ -8,6 +8,9 @@ import { QuizQuestion, QuizScreen } from '../types'
 type QuizData = {
     currentQuestion: QuizQuestion
     currentScreen: QuizScreen
+    onStartBtnClick: () => void
+    onAnswerBtnClick: (i: number) => void
+    onTryAgainBtnClick: () => void
 }
 
 const useQuizData = (): QuizData => {
@@ -18,7 +21,24 @@ const useQuizData = (): QuizData => {
     useEffect(() => {
         dispatch(setQuestions(jsonData.data))
     }, [])
-    return { currentQuestion, currentScreen }
+
+    const onStartBtnClick = () => {
+        dispatch(startGame())
+    }
+
+    const onAnswerBtnClick = (i: number) => {
+        if (currentQuestion.correct.includes(i)) {
+            dispatch(nextStage())
+        } else {
+            dispatch(gameOver())
+        }
+    }
+
+    const onTryAgainBtnClick = () => {
+        dispatch(resetGame())
+    }
+
+    return { currentQuestion, currentScreen, onStartBtnClick, onAnswerBtnClick, onTryAgainBtnClick }
 }
 
 export default useQuizData

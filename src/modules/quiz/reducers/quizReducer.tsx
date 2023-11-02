@@ -22,10 +22,22 @@ const quizSlice = createSlice({
         setQuestions(state, action: PayloadAction<QuizQuestion[]>) {
             const { payload } = action
             return { ...state, questions: payload }
+        },
+        startGame(state) {
+            return { ...state, currentScreen: QuizScreen.InGame }
+        },
+        gameOver(state) {
+            return { ...state, currentScreen: QuizScreen.GameOver }
+        },
+        nextStage(state) {
+            return { ...state, currentStage: state.currentStage + 1 }
+        },
+        resetGame(state) {
+            return { ...state, currentScreen: QuizScreen.Start, currentStage: 0 }
         }
     }
 })
 
-export const { setQuestions } = quizSlice.actions
+export const { setQuestions, startGame, gameOver, nextStage, resetGame } = quizSlice.actions
 
 export default quizSlice.reducer
