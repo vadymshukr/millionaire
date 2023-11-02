@@ -1,5 +1,5 @@
 import React from 'react'
-import { QuizQuestion } from '../../types'
+import { QuizQuestion } from '../../types/types'
 
 type Props = {
     currentQuestion: QuizQuestion

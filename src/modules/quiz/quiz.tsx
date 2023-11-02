@@ -3,7 +3,7 @@ import GameOverScreen from './components/GameOverScreen/GameOverScreen'
 import GameScreen from './components/GameScreen/GameScreen'
 import StartScreen from './components/StartScreen/StartScreen'
 import useQuizData from './hooks/useQuizData'
-import { QuizScreen } from './types'
+import { QuizScreen } from './types/types'
 
 function Quiz() {
     const {

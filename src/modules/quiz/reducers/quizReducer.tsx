@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { QuizQuestion, QuizScreen } from '../types'
+import { QuizQuestion, QuizScreen } from '../types/types'
 
 type State = {
     currentScreen: QuizScreen

@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../../../store/store'
 import { gameOver, nextStage, resetGame, setQuestions, startGame } from '../reducers/quizReducer'
 
 import jsonData from '../data/quiz.json'
-import { QuizQuestion, QuizScreen } from '../types'
+import { QuizQuestion, QuizScreen } from '../types/types'
 
 type QuizData = {
     currentQuestion: QuizQuestion
@@ -17,7 +17,7 @@ const useQuizData = (): QuizData => {
     const dispatch = useAppDispatch()
     const quizData = useAppSelector(state => state.quiz)
     const { questions, currentStage, currentScreen } = quizData
-    const currentQuestion = questions[currentStage]
+    const currentQuestion: QuizQuestion = questions[currentStage]
     useEffect(() => {
         dispatch(setQuestions(jsonData.data))
     }, [])
