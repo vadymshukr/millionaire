@@ -1,12 +1,22 @@
 import React from 'react'
-import { QuizQuestion } from '../../types/types'
+import { useAppDispatch, useAppSelector } from '../../../../store/store'
+import { gameOver, nextStage } from '../../reducers/quizReducer'
+import { QuizQuestion } from '../../types'
 
-type Props = {
-    currentQuestion: QuizQuestion
-    onAnswerBtnClick: (i: number) => void
-}
+function GameScreen() {
+    const quizData = useAppSelector(state => state.quiz)
+    const dispatch = useAppDispatch()
 
-function GameScreen({ currentQuestion, onAnswerBtnClick }: Props) {
+    const { questions, currentStage } = quizData
+    const currentQuestion: QuizQuestion = questions[currentStage]
+
+    const onAnswerBtnClick = (i: number) => {
+        if (currentQuestion.correct.includes(i)) {
+            dispatch(nextStage())
+        } else {
+            dispatch(gameOver())
+        }
+    }
     return (
         <>
             <h1>QUIZ</h1>

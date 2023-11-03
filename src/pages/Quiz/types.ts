@@ -1,7 +1,7 @@
 export enum QuizScreen {
-    Start,
-    InGame,
-    GameOver
+    Start = 'Start',
+    InGame = 'InGame',
+    GameOver = 'GameOver'
 }
 
 export type QuizQuestion = {

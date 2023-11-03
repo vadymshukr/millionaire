@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import quizReducer from '../modules/quiz/reducers/quizReducer.tsx'
+import quizReducer from '../pages/Quiz/reducers/quizReducer'
 
 export const store = configureStore({
     reducer: {
