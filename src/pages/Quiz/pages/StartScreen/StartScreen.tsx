@@ -14,6 +14,7 @@ function StartScreen() {
     const onStartBtnClick = () => {
         dispatch(startGame())
     }
+    console.log('test')
     return (
         <div className={styles.startScreen}>
             <Background className={styles.background} />
