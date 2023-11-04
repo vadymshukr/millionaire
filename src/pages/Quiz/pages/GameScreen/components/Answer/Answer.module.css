@@ -1,0 +1,84 @@
+.answer  {
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 422px;
+    padding: 0 16px;
+}
+.answer.selected button svg path{
+    fill: var(--orange-5);
+    stroke: var(--orange-100);
+}
+
+.answer.correct button svg path{
+    fill: var(--green-5);
+    stroke: var(--green-100);
+}
+
+.answer.error button svg path{
+    fill: var(--red-5);
+    stroke: var(--red-100);
+}
+
+.answer::before,
+.answer::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 1px;
+    background: var(--black-40);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.answer::before{
+    left: 0;
+}
+
+.answer::after {
+    right: 0;
+}
+
+.answer button {
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    z-index: 2;
+    outline: none;
+    background: none;
+    position: relative;
+    padding: 0 32px;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    color: var(--black-100);
+    transition: var(--transition);
+}
+
+.answer span {
+    position: relative;
+    z-index: 2;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.key {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--orange-100)
+}

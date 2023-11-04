@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from '../../store/store'
+import { useAppDispatch, useAppSelector } from 'src/store/store'
 import jsonData from './data/quiz.json'
 import GameOverScreen from './pages/GameOverScreen/GameOverScreen'
 import GameScreen from './pages/GameScreen/GameScreen'

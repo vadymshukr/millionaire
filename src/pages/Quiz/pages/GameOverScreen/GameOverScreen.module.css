@@ -1,0 +1,33 @@
+.gameOverScreen {
+   min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    flex-basis: 624px;
+}
+
+.score {
+    opacity: .5;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.16;
+}
+
+.title {
+    margin-bottom: 64px;
+}
+
+.main {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.media {
+    flex-basis: 624px;
+}

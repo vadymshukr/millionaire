@@ -1,0 +1,36 @@
+.gameScreen {
+    background: var(--black-5);
+    flex: 1;
+    display: flex;
+
+}
+
+.questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px 0;
+    max-width: 840px;
+}
+
+.content {
+}
+
+.main {
+    flex-grow: 1;
+    padding: 13vh 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.sidebar {
+    padding: 40px 0;
+    flex-basis: 25%;
+    background: var(--white-100);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

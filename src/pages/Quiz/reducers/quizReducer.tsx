@@ -6,13 +6,15 @@ type State = {
     currentStage: number
     questions: QuizQuestion[]
     isLoading: boolean
+    prize: number
 }
 
 const initialState: State = {
     currentStage: 0,
     questions: [],
     isLoading: false,
-    currentScreen: QuizScreen.Start
+    currentScreen: QuizScreen.Start,
+    prize: 0
 }
 
 const quizSlice = createSlice({
@@ -33,11 +35,15 @@ const quizSlice = createSlice({
             return { ...state, currentStage: state.currentStage + 1 }
         },
         resetGame(state) {
-            return { ...state, currentScreen: QuizScreen.Start, currentStage: 0 }
+            return { ...state, currentScreen: QuizScreen.Start, currentStage: 0, prize: 0 }
+        },
+        savePrize(state, action: PayloadAction<number>) {
+            return { ...state, prize: action.payload }
         }
     }
 })
 
-export const { setQuestions, startGame, gameOver, nextStage, resetGame } = quizSlice.actions
+export const { setQuestions, startGame, gameOver, nextStage, resetGame, savePrize } =
+    quizSlice.actions
 
 export default quizSlice.reducer

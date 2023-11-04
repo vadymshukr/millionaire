@@ -8,7 +8,8 @@
         "Charades",
         "Hopscotch"
       ],
-      "correct": [0]
+      "correct": [0],
+      "prize": 500
     },
     {
       "question": "On a radio, stations are changed by using what control?",
@@ -18,7 +19,8 @@
         "Bass",
         "Treble"
       ],
-      "correct": [0]
+      "correct": [0],
+      "prize": 1000
     },
     {
       "question": "Which material is most dense?",
@@ -28,7 +30,8 @@
         "Butter",
         "Gold"
       ],
-      "correct": [3]
+      "correct": [3],
+      "prize": 2000
     },
     {
       "question": "Which state in the United States is largest by area?",
@@ -38,7 +41,8 @@
         "Texas",
         "Hawaii"
       ],
-      "correct": [0]
+      "correct": [0],
+      "prize": 4000
     },
     {
       "question": "What is Aurora Borealis commonly known as?",
@@ -48,7 +52,8 @@
         "Book of ages",
         "a Game of Thrones main character"
       ],
-      "correct": [1]
+      "correct": [1],
+      "prize": 8000
     },
     {
       "correct": [3],
@@ -58,7 +63,8 @@
         "discovered that the movement of pendulum produces a regular time measurement",
         "All of the above"
       ],
-      "question": "Galileo was an Italian astronomer who"
+      "question": "Galileo was an Italian astronomer who",
+      "prize": 16000
     },
     {
       "correct": [3],
@@ -68,7 +74,8 @@
         "the pigment cells in the skin get stimulated and produce a healthy tan",
         "the ultraviolet rays convert skin oil into Vitamin D"
       ],
-      "question": "Exposure to sunlight helps a person improve his health because"
+      "question": "Exposure to sunlight helps a person improve his health because",
+      "prize": 32000
     },
     {
       "correct": [0],
@@ -78,7 +85,8 @@
         "National Olympic Committee for outstanding work",
         "None of the above"
       ],
-      "question": "Sir Thomas Fearnley Cup is awarded to"
+      "question": "Sir Thomas Fearnley Cup is awarded to",
+      "prize": 64000
     },
     {
       "correct": [1],
@@ -88,7 +96,8 @@
         "1901",
         "1965"
       ],
-      "question": "Oscar Awards were instituted in"
+      "question": "Oscar Awards were instituted in",
+      "prize": 125000
     },
     {
       "correct": [2],
@@ -98,7 +107,8 @@
         "1979",
         "1800"
       ],
-      "question": "When did Margaret Thatcher became the first female Prime Minister of Britain?"
+      "question": "When did Margaret Thatcher became the first female Prime Minister of Britain?",
+      "prize": 250000
     },
     {
       "correct": [2],
@@ -108,7 +118,8 @@
         "1st May",
         "1st August"
       ],
-      "question": "When is the International Workers' Day?"
+      "question": "When is the International Workers' Day?",
+      "prize": 500000
     },
     {
       "correct": [2],
@@ -118,7 +129,8 @@
         "1964",
         "1965"
       ],
-      "question": "When did China test their first atomic device?"
+      "question": "When did China test their first atomic device?",
+      "prize": 1000000
     }
   ]
 }
