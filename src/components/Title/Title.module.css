@@ -4,3 +4,10 @@
     line-height: 1.16;
     margin: 0;
 }
+
+@media (max-width: 991px) {
+    .title {
+        font-size: 32px;
+
+    }
+}

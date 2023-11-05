@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Header from 'src/components/Header/Header'
 import getQuestionKey from 'src/pages/Quiz/helpers/getQuestionKey'
 import Answer from 'src/pages/Quiz/pages/GameScreen/components/Answer/Answer'
 import PrizeItem from 'src/pages/Quiz/pages/GameScreen/components/PrizeItem/PrizeItem'
@@ -9,12 +10,15 @@ import { QuizQuestion } from '../../types'
 import styles from './GameScreen.module.css'
 
 function GameScreen() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const quizData = useAppSelector(state => state.quiz)
     const { questions, currentStage } = quizData
     const currentQuestion: QuizQuestion = questions[currentStage]
     const prizes = questions.map(item => item.prize)
+
     return (
         <div className={styles.gameScreen}>
+            <Header setIsMobileMenuOpen={setIsMobileMenuOpen} isMobileMenuOpen={isMobileMenuOpen} />
             {currentQuestion && (
                 <>
                     <div className={styles.main}>
@@ -35,7 +39,7 @@ function GameScreen() {
                             })}
                         </div>
                     </div>
-                    <div className={styles.sidebar}>
+                    <div className={`${styles.sidebar} ${isMobileMenuOpen ? styles.active : ''}`}>
                         {prizes.map((prize, i) => (
                             <PrizeItem
                                 isDone={i < currentStage}

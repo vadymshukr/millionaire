@@ -23,7 +23,7 @@ function StartScreen() {
                         <img src={handImg} alt='hand' />
                     </div>
                     <div className={styles.content}>
-                        <Title>Who wants to be a millionaire?</Title>
+                        <Title className={styles.title}>Who wants to be a millionaire?</Title>
                         <Button onClick={onStartBtnClick}>Start</Button>
                     </div>
                 </div>

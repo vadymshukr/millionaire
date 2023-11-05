@@ -20,3 +20,9 @@
 .button:hover {
     background: var(--orange-80);
 }
+
+@media (max-width: 991px) {
+    .button {
+        max-width: 100%;
+    }
+}

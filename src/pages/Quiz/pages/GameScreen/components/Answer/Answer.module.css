@@ -82,3 +82,12 @@
     font-weight: 600;
     color: var(--orange-100)
 }
+
+@media (max-width: 991px) {
+    .answer {
+        height: 56px;
+    }
+    .answer button {
+        font-size: 14px;
+    }
+}

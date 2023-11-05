@@ -23,8 +23,11 @@ function GameOverScreen() {
                         <img src={handImg} alt='hand' />
                     </div>
                     <div className={styles.content}>
-                        <span className={styles.score}>Total score:</span>
-                        <Title className={styles.title}>{formatCurrency(prize)} earned</Title>
+                        <div>
+                            <span className={styles.score}>Total score:</span>
+                            <Title className={styles.title}>{formatCurrency(prize)} earned</Title>
+                        </div>
+
                         <Button onClick={onTryAgainBtnClick}>Try again</Button>
                     </div>
                 </div>
