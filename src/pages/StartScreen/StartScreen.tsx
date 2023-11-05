@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from 'src/components/Button/Button'
 import Container from 'src/components/Container/Container'
+import { goToQuizScreen } from 'src/components/Router/store'
 import Title from 'src/components/Title/Title'
-import { useAppDispatch } from 'src/store/store'
+import jsonData from 'src/modules/quiz/data/quiz.json'
+import { useAppDispatch } from 'src/store'
 import handImg from 'src/assets/hand.svg'
-import { startGame } from '../../reducers/quizReducer'
+import { setQuestions } from 'src/modules/quiz/store'
 
 import styles from './StartScreen.module.css'
 import Background from './assets/background.svg?react'
@@ -12,8 +14,12 @@ import Background from './assets/background.svg?react'
 function StartScreen() {
     const dispatch = useAppDispatch()
     const onStartBtnClick = () => {
-        dispatch(startGame())
+        dispatch(goToQuizScreen())
     }
+
+    useEffect(() => {
+        dispatch(setQuestions(jsonData.data))
+    }, [dispatch])
     return (
         <div className={styles.startScreen}>
             <Background className={styles.background} />

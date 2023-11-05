@@ -2,18 +2,20 @@ import React from 'react'
 import handImg from 'src/assets/hand.svg'
 import Button from 'src/components/Button/Button'
 import Container from 'src/components/Container/Container'
+import { goToStartScreen } from 'src/components/Router/store'
 import Title from 'src/components/Title/Title'
-import formatCurrency from 'src/pages/Quiz/helpers/formatCurrency'
-import { useAppDispatch, useAppSelector } from 'src/store/store'
-import styles from './GameOverScreen.module.css'
-import { resetGame } from '../../reducers/quizReducer'
+import formatCurrency from 'src/helpers/formatCurrency'
+import { useAppDispatch, useAppSelector } from 'src/store'
+import { resetGame } from 'src/modules/quiz/store'
+import styles from './ResultScreen.module.css'
 
-function GameOverScreen() {
+function ResultScreen() {
     const dispatch = useAppDispatch()
     const prize = useAppSelector(state => state.quiz.prize)
 
     const onTryAgainBtnClick = () => {
         dispatch(resetGame())
+        dispatch(goToStartScreen())
     }
     return (
         <div className={styles.gameOverScreen}>
@@ -36,4 +38,4 @@ function GameOverScreen() {
     )
 }
 
-export default GameOverScreen
+export default ResultScreen

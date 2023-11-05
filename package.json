@@ -12,7 +12,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
-    "lint-staged": "eslint $(git diff --name-only HEAD | grep -E '\\.(ts|tsx)$' | xargs)",
+    "lint-staged": "eslint $(git diff --name-only HEAD | grep -E '\\.(ts|tsx)$' | xargs) --no-error-on-unmatched-pattern",
     "test": "jest"
   },
   "dependencies": {

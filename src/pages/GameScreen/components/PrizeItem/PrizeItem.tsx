@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind'
 import React from 'react'
-import formatCurrency from 'src/pages/Quiz/helpers/formatCurrency'
+import formatCurrency from 'src/helpers/formatCurrency'
 import styles from './PrizeItem.module.css'
 import Background from './assets/background.svg?react'
 

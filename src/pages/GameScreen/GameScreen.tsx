@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Header from 'src/components/Header/Header'
-import getQuestionKey from 'src/pages/Quiz/helpers/getQuestionKey'
-import Answer from 'src/pages/Quiz/pages/GameScreen/components/Answer/Answer'
-import PrizeItem from 'src/pages/Quiz/pages/GameScreen/components/PrizeItem/PrizeItem'
-import Question from 'src/pages/Quiz/pages/GameScreen/components/Question/Question'
-import { useAppSelector } from 'src/store/store'
-import { QuizQuestion } from '../../types'
+import Header from 'src/pages/GameScreen/components/Header/Header'
+import getQuestionKey from 'src/pages/GameScreen/helpers/getQuestionKey'
+import Answer from 'src/pages/GameScreen/components/Answer/Answer'
+import PrizeItem from 'src/pages/GameScreen/components/PrizeItem/PrizeItem'
+import Question from 'src/pages/GameScreen/components/Question/Question'
+import { useAppSelector } from 'src/store'
+import { QuizQuestion } from '../../modules/quiz/types'
 
 import styles from './GameScreen.module.css'
 

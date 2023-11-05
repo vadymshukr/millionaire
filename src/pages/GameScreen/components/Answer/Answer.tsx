@@ -1,7 +1,8 @@
 import React, { PropsWithChildren, useState } from 'react'
-import { gameOver, nextStage, savePrize } from 'src/pages/Quiz/reducers/quizReducer'
-import { useAppDispatch } from 'src/store/store'
+import { goToResultScreen } from 'src/components/Router/store'
+import { useAppDispatch } from 'src/store'
 import classNames from 'classnames/bind'
+import { nextStage, savePrize } from 'src/modules/quiz/store'
 import styles from './Answer.module.css'
 
 import Background from './assets/background.svg?react'
@@ -41,10 +42,10 @@ function Answer({
                     if (!isFinalQuestion) {
                         dispatch(nextStage())
                     } else {
-                        dispatch(gameOver())
+                        dispatch(goToResultScreen())
                     }
                 } else {
-                    dispatch(gameOver())
+                    dispatch(goToResultScreen())
                 }
             }, 1500)
         }, 1500)

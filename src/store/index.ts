@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
-import quizReducer from '../pages/Quiz/reducers/quizReducer'
+import routerReducer from 'src/components/Router/store'
+import quizReducer from 'src/modules/quiz/store'
 
 export const store = configureStore({
     reducer: {
-        quiz: quizReducer
+        quiz: quizReducer,
+        router: routerReducer
     }
 })
 export type AppState = ReturnType<typeof store.getState>

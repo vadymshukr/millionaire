@@ -1,7 +1,7 @@
 export enum QuizScreen {
     Start = 'Start',
     InGame = 'InGame',
-    GameOver = 'GameOver'
+    Result = 'Result'
 }
 
 export type QuizQuestion = {
@@ -9,8 +9,4 @@ export type QuizQuestion = {
     content: string[]
     correct: number[]
     prize: number
-}
-
-export type QuizData = {
-    data: QuizQuestion[]
 }
